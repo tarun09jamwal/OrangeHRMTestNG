@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import java.time.Duration;
+
 public class BaseClass
 {
     static WebDriver driver;
@@ -21,7 +23,7 @@ public class BaseClass
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         pageFactory = new PageFactory(driver);
     }
-    @AfterClass
+//    @AfterClass
     public static void Close()
     {
         driver.close();
