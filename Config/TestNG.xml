@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Cases"  >
+
+    <test name="Verify user is added">
+        <parameter name="testRunId" value="TCTC-1"/>
+        <classes>
+            <class name="OrangeHrm.Test.TestPage"/>
+        </classes>
+    </test>
+
+</suite>
