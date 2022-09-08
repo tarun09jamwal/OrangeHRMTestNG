@@ -2,6 +2,8 @@ package OrangeHrm.Page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
@@ -25,9 +27,11 @@ public class UserDetails
     By adminVerify = By.xpath("//*[contains(text(),'Admin')]");
 
     By searchVerify = By.xpath("//button[@type='submit']");
+    WebDriverWait wait;
     public UserDetails(WebDriver driver)
     {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
 
     public void detail() throws InterruptedException {
