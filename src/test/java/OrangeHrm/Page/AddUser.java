@@ -5,16 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 public class AddUser {
     WebDriver driver;
-
     By addButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");
 
-    public AddUser(WebDriver driver)
-    {
+    public AddUser(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void user()
-    {
+    public void User() {
         driver.findElement(addButton).click();
     }
 

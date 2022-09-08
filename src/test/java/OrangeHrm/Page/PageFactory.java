@@ -6,18 +6,13 @@ public class PageFactory
 {
     WebDriver driver;
     private LoginPage loginPage;
-
     private MenuBar menuBar;
-
     private AddUser addUser;
-
     private UserDetails userDetails;
-
     private DelUser delUser;
-
     private UserAbletoApplyLeave userAbletoApplyLeave;
 
-     public PageFactory(WebDriver driver)
+    public PageFactory(WebDriver driver)
     {
         this.driver = driver;
     }

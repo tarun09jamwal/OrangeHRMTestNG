@@ -10,7 +10,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-
 public class BaseClass
 {
     static WebDriver driver;
@@ -38,7 +37,7 @@ public class BaseClass
             pageFactory = new PageFactory(driver);
         }
     }
-        @AfterClass
+//        @AfterClass
         public static void Logout ()
         {
             driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
