@@ -16,7 +16,6 @@ public class DelUser {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
-
     public void Del() {
         wait.until(ExpectedConditions.elementToBeClickable(delButton));
         driver.findElement(delButton).click();

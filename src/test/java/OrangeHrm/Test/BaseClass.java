@@ -37,7 +37,7 @@ public class BaseClass
             pageFactory = new PageFactory(driver);
         }
     }
-//        @AfterClass
+      @AfterClass
         public static void Logout ()
         {
             driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();

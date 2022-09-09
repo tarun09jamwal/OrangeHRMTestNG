@@ -12,6 +12,6 @@ public class TestUserAbletoApplyLeave extends BaseClass
     @Test
     public void UserLeave()
     {
-        pageFactory.userAbletoApplyLeave().Leave();
+        pageFactory.userAbletoApplyLeave().UserLeave();
     }
 }

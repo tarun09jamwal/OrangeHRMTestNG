@@ -10,7 +10,6 @@ public class AddUser {
     public AddUser(WebDriver driver) {
         this.driver = driver;
     }
-
     public void User() {
         driver.findElement(addButton).click();
     }

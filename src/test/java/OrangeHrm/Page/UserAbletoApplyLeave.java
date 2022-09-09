@@ -39,7 +39,7 @@ public class UserAbletoApplyLeave {
         wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
 
-    public void Leave() {
+    public void UserLeave() {
         driver.findElement(leaveButton).click();
         driver.findElement(apply).click();
         wait.until(ExpectedConditions.elementToBeClickable(leaveType));
@@ -58,7 +58,7 @@ public class UserAbletoApplyLeave {
         Assert.assertTrue(actual.equals("Tarun want leave"), "Expected result does not match with actual result");
     }
 
-    public void UserReport() //TCTC-02
+    public void UserReport()
     {
         driver.findElement(leaveButton).click();
         driver.findElement(reports).click();

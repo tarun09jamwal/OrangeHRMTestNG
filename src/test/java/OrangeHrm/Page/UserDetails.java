@@ -12,9 +12,9 @@ import java.time.Duration;
 
 public class UserDetails {
     WebDriver driver;
+    WebDriverWait wait;
     By userRoleDropdown = By.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[1]");
     By employeeName = By.xpath("(//div/input)[2]");
-    String uniqueName;
     By statusDropdown = By.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[2]");
     By username = By.xpath("(//div/input[@class='oxd-input oxd-input--active'])[2]");
     By password = By.xpath("(//div/input[@type='password'])[1]");
@@ -22,14 +22,12 @@ public class UserDetails {
     By saveButton = By.xpath("//button[@type='submit']");
     By userNameVerify = By.xpath("(//input[@class='oxd-input oxd-input--active'])[2]");
     By userRoleVerify = By.xpath("(//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow'])[1]");
-
     By adminVerify = By.xpath("//*[contains(text(),'Admin')]");
-
     By searchVerify = By.xpath("//button[@type='submit']");
     By errorMessage = By.xpath("//span[contains(@class,'oxd-input-field-error-message')]");
     By verifyAdminPage = By.xpath("(//h6[contains(@class,'oxd-text--h6')])[2]");
-    WebDriverWait wait;
 
+    String uniqueName;
     public UserDetails(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(50));
@@ -40,14 +38,11 @@ public class UserDetails {
         uniqueName = "Odis09adalwin" + randomNumber;
         driver.findElement(userRoleDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Admin')]")).click();
-
         driver.findElement(employeeName).sendKeys("Odis");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         driver.findElement(By.xpath("//*[contains(text(),'Odis')]")).click();
-
         driver.findElement(statusDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Enabled')]")).click();
-
         driver.findElement(username).sendKeys(uniqueName);
         driver.findElement(password).sendKeys("Tarun@123");
         driver.findElement(confirmPassword).sendKeys("Tarun@123");
