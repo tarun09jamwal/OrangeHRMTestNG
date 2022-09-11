@@ -1,11 +1,29 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Cases"  >
+<suite name="All Test Cases" verbose="1" >
 
     <test name="Verify user is added">
+        <parameter name="browserName" value="chrome"></parameter>
         <parameter name="testRunId" value="TCTC-1"/>
         <classes>
             <class name="OrangeHrm.Test.TestPage"/>
         </classes>
     </test>
+
+    <test name="Verify user able to apply leave">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="testRunId2" value="TCTC-2"/>
+        <classes>
+            <class name="OrangeHrm.Test.TestUserAbletoApplyLeave"/>
+        </classes>
+    </test>
+
+    <test name="Verify user Leave Entitlements">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="testRunId3" value="TCTC-3"/>
+        <classes>
+            <class name="OrangeHrm.Test.LeaveReport"/>
+        </classes>
+    </test>
+
 
 </suite>

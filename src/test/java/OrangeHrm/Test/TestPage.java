@@ -10,21 +10,21 @@ public class TestPage extends BaseClass {
     }
     @Test(dependsOnMethods = "Login")
     public void AdminMenuClick() {
-        pageFactory.menuBar().menu();
+        pageFactory.menuBar().Menu();
     }
 
     @Test(dependsOnMethods = "AdminMenuClick")
-    public void AddUser() throws InterruptedException
+    public void AddUser()
     {
-        pageFactory.addUser().user();
-        pageFactory.userDetails().detail();
-        pageFactory.userDetails().verify();
+        pageFactory.addUser().User();
+        pageFactory.userDetails().Detail();
+        pageFactory.userDetails().Verify();
     }
 
     @Test(dependsOnMethods = "AddUser")
     public void DelUser()
     {
-        pageFactory.delUser().del();
+        pageFactory.delUser().Del();
         driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']")).click();
     }
 
